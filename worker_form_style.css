@@ -1,0 +1,121 @@
+#workerForm {
+    width: 100%;
+    max-width: 50%; /* Limit the width of the form */
+    height: calc(100% - 40px); /* Subtracting the margin from the height */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+}
+
+
+
+.form-section, .day-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form-section label, .day-section label {
+    margin-bottom: 5px;
+}
+
+.form-section input, .day-section input, .day-section select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#workerTitle {
+    text-align: center;
+    margin-bottom: 10px; /* Space between title and form */
+
+}
+
+
+
+.form-section input[type="text"] {
+    padding: 8px; /* Uniform padding */
+    border: 1px solid #aaa; /* Subtle border */
+    border-radius: 4px; /* Rounded corners for inputs */
+}
+
+.form-section label {
+    white-space: nowrap; /* Prevents label text from wrapping */
+}
+
+/* Form and Controls Styling */
+#workerForm button {
+    width: 100%; /* Ensures form elements use full available width */
+    padding: 8px; /* Uniform padding */
+    margin-bottom: 10px; /* Space between form elements */
+    border-radius: 4px; /* Rounded corners for inputs and button */
+}
+
+/* Input and select general styling */
+input[type="time"], select {
+    padding: 0px; /* Ensures padding inside inputs and selects */
+    border: 1px solid #aaa; /* Subtle border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+#workerForm button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Styling for each day-section using CSS Grid */
+.day-section {
+    display: grid;
+    grid-template-columns: 150px 50px 1fr 50px 1fr 50px 1fr; /* four columns: label, start time, end time, select */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Spacing between grid items */
+    
+}
+
+/* Adjust the label width if necessary */
+.day-section label {
+    white-space: nowrap; /* Prevents label text from wrapping */
+}
+
+/* Input and select elements styling for consistency */
+.day-section input[type="time"],
+.day-section select {
+    width: 80%; 
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+/* Ensure the submit button is not affected by grid and is centered */
+#workerForm button {
+    align-self: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+#workerForm button:hover {
+    background-color: #004494;
+}
+
+

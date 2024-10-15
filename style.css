@@ -1,0 +1,99 @@
+/* Base styles for the entire document */
+/* General body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Organize content in a column */
+    height: 100vh;
+    overflow: hidden;
+    /* background-color: 	#0e1111; */
+}
+
+
+
+#pageTitle {
+    text-align: center;
+    margin-top: 10px; /* Provide some top margin */
+    margin-bottom: 20px; /* Space between title and content */
+}
+
+
+
+
+/* Container for form and table */
+#content {
+    display: flex;
+    flex-direction: row; /* Ensure this is a row to keep form and table side by side */
+    flex: 4; /* Takes remaining space */
+    overflow: auto; /* Allows scrolling if content is too large */
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+}
+
+
+
+h5 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ #scheduleTableContainer, #scheduleContainer {
+    width: 100%;
+    height: calc(100% - 40px); /* Subtracting the margin from the height */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+}
+
+
+
+/* Container for the schedule table */
+
+
+/* Ensure the table takes full width of its container */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+/* schedule */
+
+
+.shift {
+    background-color: #01054d;
+    color: #aaa;
+}
+
+.update {
+    background-color: #f90202;
+}

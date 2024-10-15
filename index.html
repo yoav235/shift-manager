@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Shift Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="worker_form_style.css">
+    <link rel="stylesheet" href="carousel_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="carousel_button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active mlm-50" aria-current="true" aria-label="Slide 1"></button>
+            <button type="carousel_button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="carousel_button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active mx-5">
+                <div class="container">
+                    <h5>Add Worker Schedule</h5>
+                    <form id="workerForm">
+                        <h2 id="workerTitle">Add Worker:</h2>
+                        <div class="form-section">
+                            <label for="workerName">Worker's Name:</label>
+                            <input type="text" id="workerName" placeholder="Enter Worker's Name" required>
+                        </div>
+                        <div class="day-section"> 
+                            <label for="sunStart">Sunday:</label>
+                            <label>Shift:</label>   
+                            <select id="sunShiftType">
+                                <option value="blank" selected disabled></option>
+                                <option value="morning">Morning</option>
+                                <option value="middle">Middle</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+                                <option value="not available">Not Available</option>
+                            </select>
+                            <label>Start:</label>
+                            <input type="time" id="sunStart" placeholder="Start Time">
+                            <label>End:</label>
+                            <input type="time" id="sunEnd" placeholder="End Time">
+                        </div>
+                        <div class="day-section">
+                            <label for="monStart">Monday:</label>
+                            <label>Shift:</label>
+                            <select id="monShiftType">
+                                <option value="blank" selected disabled></option>
+                                <option value="morning">Morning</option>
+                                <option value="middle">Middle</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+                                <option value="not available">Not Available</option>
+                            </select>
+                            <label>Start:</label>
+                            <input type="time" id="monStart" placeholder="Start Time">
+                            <label>End:</label>
+                            <input type="time" id="monEnd" placeholder="End Time">
+                        </div>
+                        <div class="day-section">
+                            <label for="tueStart">Tuesday:</label>
+                            <label>Shift:</label>
+                            <select id="tueShiftType">
+                                <option value="blank" selected disabled></option>
+                                <option value="morning">Morning</option>
+                                <option value="middle">Middle</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+                                <option value="not available">Not Available</option>
+                            </select>
+                            <label>Start:</label>
+                            <input type="time" id="tueStart" placeholder="Start Time">
+                            <label>End:</label>
+                            <input type="time" id="tueEnd" placeholder="End Time">
+                        </div>
+                        <div class="day-section">
+                            <label for="wedStart">Wednesday:</label>
+                            <label>Shift:</label>
+                            <select id="wedShiftType">
+                                <option value="blank" selected disabled></option>
+                                <option value="morning">Morning</option>
+                                <option value="middle">Middle</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+                                <option value="not available">Not Available</option>
+                            </select>
+                            <label>Start:</label>
+                            <input type="time" id="wedStart" placeholder="Start Time">
+                            <label>End:</label>
+                            <input type="time" id="wedEnd" placeholder="End Time">
+                        </div>
+                        <div class="day-section">
+                            <label for="thuStart">Thursday:</label>
+                            <label>Shift:</label>
+                            <select id="thuShiftType">
+                                <option value="blank" selected disabled></option>
+                                <option value="morning">Morning</option>
+                                <option value="middle">Middle</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+                                <option value="not available">Not Available</option>
+                            </select>
+                            <label>Start:</label>
+                            <input type="time" id="thuStart" placeholder="Start Time">
+                            <label>End:</label>
+                            <input type="time" id="thuEnd" placeholder="End Time">
+                        </div>
+                        <div class="day-section">
+                            <label for="friStart">Friday:</label>
+                            <label>Shift:</label>
+                            <select id="friShiftType">
+                                <option value="blank" selected disabled></option>
+                                <option value="morning">Morning</option>
+                                <option value="middle">Middle</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+                                <option value="not available">Not Available</option>
+                            </select>
+                            <label>Start:</label>
+                            <input type="time" id="friStart" placeholder="Start Time">
+                            <label>End:</label>
+                            <input type="time" id="friEnd" placeholder="End Time">
+                        </div>
+                        <div class="day-section">
+                            <label for="satStart">Saturday:</label>
+                            <label>Shift:</label>
+                            <select id="satShiftType">
+                                <option value="blank" selected disabled></option>
+                                <option value="morning">Morning</option>
+                                <option value="middle">Middle</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+                                <option value="not available">Not Available</option>
+                            </select>
+                            <label>Start:</label>
+                            <input type="time" id="satStart" placeholder="Start Time">
+                            <label>End:</label>
+                            <input type="time" id="satEnd" placeholder="End Time">
+                        </div>
+                        <button type="submit">Add Worker Schedule</button>
+                    </form>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <h5>Worker Schedules</h5>
+                    <div id="scheduleTableContainer">
+                        <h2>Worker Schedules:</h2>
+                        <table id="scheduleTable" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Worker Name</th>
+                                    <th>Sunday</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Worker schedules will be dynamically added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <h5>Schedule</h5>
+                    <div id="scheduleContainer">
+                        <h2>Schedule</h2>
+                        <table id="schedule" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Shifts</th>
+                                    <th>Sunday</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="shift">Morning</td>
+                                    <td id="sunMorning"></td>
+                                    <td id="monMorning"></td>
+                                    <td id="tueMorning"></td>
+                                    <td id="wedMorning"></td>
+                                    <td id="thuMorning"></td>
+                                    <td id="friMorning"></td>
+                                    <td id="satMorning"></td>
+                                </tr>
+                                <tr>
+                                    <td class="shift">Middle</td>
+                                    <td id="sunMiddle"></td>
+                                    <td id="monMiddle"></td>
+                                    <td id="tueMiddle"></td>
+                                    <td id="wedMiddle"></td>
+                                    <td id="thuMiddle"></td>
+                                    <td id="friMiddle"></td>
+                                    <td id="satMiddle"></td>
+                                </tr>
+                                <tr>
+                                    <td class="shift">Evening</td>
+                                    <td id="sunEvening"></td>
+                                    <td id="monEvening"></td>
+                                    <td id="tueEvening"></td>
+                                    <td id="wedEvening"></td>
+                                    <td id="thuEvening"></td>
+                                    <td id="friEvening"></td>
+                                    <td id="satEvening"></td>
+                                </tr>
+                                <tr>
+                                    <td class="shift">Night</td>
+                                    <td id="sunNight"></td>
+                                    <td id="monNight"></td>
+                                    <td id="tueNight"></td>
+                                    <td id="wedNight"></td>
+                                    <td id="thuNight"></td>
+                                    <td id="friNight"></td>
+                                    <td id="satNight"></td>
+                                </tr>
+                                <tr>
+                                    <td class="update">Updates</td>
+                                    <td id="sunUpdates"></td>
+                                    <td id="monUpdates"></td>
+                                    <td id="tueUpdates"></td>
+                                    <td id="wedUpdates"></td>
+                                    <td id="thuUpdates"></td>
+                                    <td id="friUpdates"></td>
+                                    <td id="satUpdates"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="carousel_button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="carousel_button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <script type="module" src="Main.js"></script>
+    <script type="module" src="scheduleBackend.js"></script>
+    <script type="module" src="testData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

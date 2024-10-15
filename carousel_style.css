@@ -1,0 +1,31 @@
+.carousel-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr 4fr 1fr 1fr; /* Divide the screen into 6 sections */
+    height: 100vh; /* Make the container take up the full height of the screen */
+    align-items: center; /* Vertically center the content */
+}
+
+.carousel-item {
+    grid-column: 3 / 5; /* Span the middle four columns */
+    background-color: #353839;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the carousel item takes full height */
+}
+
+button[type="carousel_button"] {
+    background-color: #0e1111;
+    height: 50px; /* Set an appropriate height for the button */
+    width: 50px;  /* Set an appropriate width for the button */
+}
+
+button.left-button {
+    grid-column: 1 / 2; /* Place the left button in the first column */
+    justify-self: center; /* Center the button horizontally in the grid area */
+}
+
+button.right-button {
+    grid-column: 6 / 7; /* Place the right button in the last column */
+    justify-self: center; /* Center the button horizontally in the grid area */
+}
